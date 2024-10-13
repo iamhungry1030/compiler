@@ -1,0 +1,27 @@
+{
+  "name": "conpiler",
+  "version": "1.0.0",
+  "description": "컴파일러만들어봄",
+  "main": "index.js",
+  "author": "imhungry1030",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "20.12.7",
+    "gts": "^5.3.1",
+    "tsc-watch": "^6.2.0",
+    "typescript": "^5.4.3"
+  },
+  "dependencies": {
+    "gts": "^5.3.1"
+  },
+  "scripts": {
+    "dev": "tsc-watch --onSuccess 'node ./build/src/index.js'",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "yarn run compile",
+    "pretest": "yarn run compile",
+    "posttest": "yarn run lint"
+  }
+}
